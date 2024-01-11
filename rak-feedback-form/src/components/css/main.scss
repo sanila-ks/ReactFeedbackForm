@@ -1,0 +1,76 @@
+$screen-max-width: 600px;
+
+@mixin flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-content {
+    @include flex-centered
+}
+
+//-----------------questionnair---------------------------------------
+.question-card {
+    height: 100%;
+    padding-Left: 10px;
+}
+
+.story-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-Index: 1;
+    padding: 20px;
+}
+
+//-----------------options---------------------------------------
+.option-label {
+    font-Size: 12px;
+    font-weight: bold;
+    color: rgb(84, 2, 216);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-Width: '100%';
+}
+
+//-----------------result heading---------------------------------------
+.summary-heading {
+    @media (max-width: $screen-max-width) {
+        font-size: 40px
+    }
+}
+
+//-----------------summary questions---------------------------------------
+.summary-questions {
+    @media (max-width: $screen-max-width) {
+        font-size: 20px
+    }
+}
+
+// -----------------summary option icons----------------------------------
+.summary-icon {
+    font-size: 30px;
+}
+
+//-----------------Summary Animation---------------------------------------
+.summary-anim {
+    animation: 'fadeIn 1s ease-in-out';
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
